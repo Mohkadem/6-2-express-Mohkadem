@@ -1,6 +1,6 @@
 /*
 ===================================================================
-Back-end Lab — Express
+Back-end Lab — Node & Express
 ===================================================================
 
 ===================================================================
@@ -18,11 +18,11 @@ LAB SETUP INSTRUCTIONS
       npm install
       npm install express cors
 
-3. Start the front server server from 6-2-node-express-Dromarjh-main\6-2-node-express path:
+3. Start the front server server from 5-7-node-express-Dromarjh-main\5-7-node-express path:
    Run:
       npm run dev
 
-4. Start the back-end server from a separate terminal, path: 6-2-node-express-Dromarjh-main\6-2-node-express\backend:
+4. Start the back-end server from a separate terminal, path: 5-7-node-express-Dromarjh-main\5-7-node-express\backend:
    Run:
       node server.js
   Note: Start the back-end server after creating the server in server.js file.
@@ -130,7 +130,6 @@ Example:
 
 */
 
-
 import { useState } from "react";
 import "./index.css";
 
@@ -151,7 +150,11 @@ function App() {
           Get Quote
         </button>
         <div className="quote-box">
-          {quote ? <p className="quote">{quote}</p> : <p className="placeholder">Click the button to get a quote</p>}
+          {quote ? (
+            <p className="quote">{quote}</p>
+          ) : (
+            <p className="placeholder">Click the button to get a quote</p>
+          )}
         </div>
       </div>
     </div>
